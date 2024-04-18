@@ -28,9 +28,12 @@
       "output": "server"
     },
     "plugins": [
-        ["expo-router", {
-            "origin": "https://expo-trpc.vercel.app/"
-        }]
+      [
+        "expo-router",
+        {
+          "origin": "https://expo-trpc.vercel.app/"
+        }
+      ]
     ]
   }
 }

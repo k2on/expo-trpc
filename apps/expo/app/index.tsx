@@ -4,13 +4,15 @@ import React, { useState } from "react";
 import { trpc } from "../utils/trpc";
 import { Button, Text } from "react-native";
 
+const URL = "https://expo-trpc.vercel.app/"
+
 function App() {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "http://localhost:8081/api/trpc",
+          url: URL + `api/trpc`,
 
           // You can pass any HTTP headers you wish here
           async headers() {
